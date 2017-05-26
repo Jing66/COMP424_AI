@@ -36,11 +36,13 @@ public class BFSPuzzle {
 		//System.out.println(dfs(start,3));
 		//System.out.println("=============");
 		while(count<100){
+			System.out.println("====NEW ITERATION=========");
 			HashMap<EightPuzzle, Integer> visitedIDS = new HashMap<EightPuzzle, Integer>();
 			EightPuzzle found = dfs(start, limit, visitedIDS);
 			limit+=1;
 			if(found!=null&& found.isGoal()) {break;}
 			count++;
+			
 		}
 	}
 	
